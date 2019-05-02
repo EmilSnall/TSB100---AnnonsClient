@@ -1,17 +1,39 @@
-﻿@{
-    ViewBag.Title = "Contact";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿@model AnnonsTjanst.ServiceReference1.Annonser
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.annonsID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.annonsNamn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.beskrivning)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.betalningsmetod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bild)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.datum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kategori)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pris)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.profilID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th></th>
+    </tr>
+    
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+</table>

@@ -16,16 +16,24 @@ namespace AnnonsTjanst.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            //List<Annons> HamtaKopAnnonser(int ProfilID)
+            //List<Annons> HamtaSaljAnnonser(int ProfilID)
+            ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
 
-            return View();
-        }
+            return View(client.HamtaSaljAnnonser(1337));
+            //return View(client.HamtaKopAnnonser(1));
+            
+            //return View();
+                }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
 
-            return View();
+            //Annons HamtaAnnons(int AnnonsID)
+            ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
+            var temp = client.HamtaAnnons(1);
+            return View(temp);
+            //return View();
         }
 
         public ActionResult Create()

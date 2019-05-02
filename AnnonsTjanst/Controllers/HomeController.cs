@@ -11,6 +11,7 @@ namespace AnnonsTjanst.Controllers
         public ActionResult Index()
         {
             ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
+            ViewBag.product = client.HamtaAnnons(3).annonsNamn;
             return View(client.HamtaAllaAnnonser());
         }
 
@@ -42,6 +43,7 @@ namespace AnnonsTjanst.Controllers
             ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
             string result = client.SkapaAnnons(annons);
             ViewBag.Message = result;
+            
             return RedirectToAction("Index");
         }
     }

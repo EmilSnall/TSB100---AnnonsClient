@@ -13,6 +13,18 @@
   <wsdl:message name="IService1_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_HamtaAllaAnnonser_InputMessage">
+    <wsdl:part name="parameters" element="tns:HamtaAllaAnnonser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_HamtaAllaAnnonser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HamtaAllaAnnonserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SkapaAnnons_InputMessage">
+    <wsdl:part name="parameters" element="tns:SkapaAnnons" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SkapaAnnons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SkapaAnnonsResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_Test_InputMessage">
     <wsdl:part name="parameters" element="tns:Test" />
   </wsdl:message>
@@ -30,6 +42,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="HamtaAllaAnnonser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/HamtaAllaAnnonser" message="tns:IService1_HamtaAllaAnnonser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/HamtaAllaAnnonserResponse" message="tns:IService1_HamtaAllaAnnonser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SkapaAnnons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SkapaAnnons" message="tns:IService1_SkapaAnnons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SkapaAnnonsResponse" message="tns:IService1_SkapaAnnons_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="Test">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Test" message="tns:IService1_Test_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/TestResponse" message="tns:IService1_Test_OutputMessage" />
@@ -43,6 +63,24 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HamtaAllaAnnonser">
+      <soap:operation soapAction="http://tempuri.org/IService1/HamtaAllaAnnonser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SkapaAnnons">
+      <soap:operation soapAction="http://tempuri.org/IService1/SkapaAnnons" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

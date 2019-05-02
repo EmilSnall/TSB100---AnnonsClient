@@ -11,8 +11,7 @@ namespace AnnonsTjanst.Controllers
         public ActionResult Index()
         {
             ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
-            ViewBag.testString = client.Test();
-            return View();
+            return View(client.HamtaAllaAnnonser());
         }
 
         public ActionResult About()
@@ -27,6 +26,23 @@ namespace AnnonsTjanst.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult Create()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(ServiceReference1.Annonser annons)
+        {
+            ViewBag.Message = "Your contact page.";
+            ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
+            string result = client.SkapaAnnons(annons);
+            ViewBag.Message = result;
+            return RedirectToAction("Index");
         }
     }
 }

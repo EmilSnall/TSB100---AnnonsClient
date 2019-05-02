@@ -15,6 +15,195 @@ namespace AnnonsTjanst.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Annonser", Namespace="http://schemas.datacontract.org/2004/07/AnnonsService")]
+    [System.SerializableAttribute()]
+    public partial class Annonser : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int annonsIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string annonsNamnField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string beskrivningField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string betalningsmetodField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string bildField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime datumField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string kategoriField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double prisField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int profilIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string statusField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int annonsID {
+            get {
+                return this.annonsIDField;
+            }
+            set {
+                if ((this.annonsIDField.Equals(value) != true)) {
+                    this.annonsIDField = value;
+                    this.RaisePropertyChanged("annonsID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string annonsNamn {
+            get {
+                return this.annonsNamnField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.annonsNamnField, value) != true)) {
+                    this.annonsNamnField = value;
+                    this.RaisePropertyChanged("annonsNamn");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string beskrivning {
+            get {
+                return this.beskrivningField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.beskrivningField, value) != true)) {
+                    this.beskrivningField = value;
+                    this.RaisePropertyChanged("beskrivning");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string betalningsmetod {
+            get {
+                return this.betalningsmetodField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.betalningsmetodField, value) != true)) {
+                    this.betalningsmetodField = value;
+                    this.RaisePropertyChanged("betalningsmetod");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bild {
+            get {
+                return this.bildField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bildField, value) != true)) {
+                    this.bildField = value;
+                    this.RaisePropertyChanged("bild");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime datum {
+            get {
+                return this.datumField;
+            }
+            set {
+                if ((this.datumField.Equals(value) != true)) {
+                    this.datumField = value;
+                    this.RaisePropertyChanged("datum");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string kategori {
+            get {
+                return this.kategoriField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.kategoriField, value) != true)) {
+                    this.kategoriField = value;
+                    this.RaisePropertyChanged("kategori");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double pris {
+            get {
+                return this.prisField;
+            }
+            set {
+                if ((this.prisField.Equals(value) != true)) {
+                    this.prisField = value;
+                    this.RaisePropertyChanged("pris");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int profilID {
+            get {
+                return this.profilIDField;
+            }
+            set {
+                if ((this.profilIDField.Equals(value) != true)) {
+                    this.profilIDField = value;
+                    this.RaisePropertyChanged("profilID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string status {
+            get {
+                return this.statusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.statusField, value) != true)) {
+                    this.statusField = value;
+                    this.RaisePropertyChanged("status");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/AnnonsService")]
     [System.SerializableAttribute()]
     public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -84,6 +273,18 @@ namespace AnnonsTjanst.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/HamtaAllaAnnonser", ReplyAction="http://tempuri.org/IService1/HamtaAllaAnnonserResponse")]
+        AnnonsTjanst.ServiceReference1.Annonser[] HamtaAllaAnnonser();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/HamtaAllaAnnonser", ReplyAction="http://tempuri.org/IService1/HamtaAllaAnnonserResponse")]
+        System.Threading.Tasks.Task<AnnonsTjanst.ServiceReference1.Annonser[]> HamtaAllaAnnonserAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SkapaAnnons", ReplyAction="http://tempuri.org/IService1/SkapaAnnonsResponse")]
+        string SkapaAnnons(AnnonsTjanst.ServiceReference1.Annonser annons);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SkapaAnnons", ReplyAction="http://tempuri.org/IService1/SkapaAnnonsResponse")]
+        System.Threading.Tasks.Task<string> SkapaAnnonsAsync(AnnonsTjanst.ServiceReference1.Annonser annons);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Test", ReplyAction="http://tempuri.org/IService1/TestResponse")]
         string Test();
         
@@ -130,6 +331,22 @@ namespace AnnonsTjanst.ServiceReference1 {
         
         public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
             return base.Channel.GetDataAsync(value);
+        }
+        
+        public AnnonsTjanst.ServiceReference1.Annonser[] HamtaAllaAnnonser() {
+            return base.Channel.HamtaAllaAnnonser();
+        }
+        
+        public System.Threading.Tasks.Task<AnnonsTjanst.ServiceReference1.Annonser[]> HamtaAllaAnnonserAsync() {
+            return base.Channel.HamtaAllaAnnonserAsync();
+        }
+        
+        public string SkapaAnnons(AnnonsTjanst.ServiceReference1.Annonser annons) {
+            return base.Channel.SkapaAnnons(annons);
+        }
+        
+        public System.Threading.Tasks.Task<string> SkapaAnnonsAsync(AnnonsTjanst.ServiceReference1.Annonser annons) {
+            return base.Channel.SkapaAnnonsAsync(annons);
         }
         
         public string Test() {
